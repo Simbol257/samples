@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Max Stoic</title>		
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+        </style>
+
+        <!-- CSS Reset -->
+        <style type="text/css">
+            /* 1. Use a more-intuitive box-sizing model */
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                font-family: "Space Grotesk";
+                scroll-behavior: smooth;
+            }
+
+            /* 2. Remove default margin */
+            * {
+                margin: 0;
+            }
+
+            body {
+                /* 4. Improve text rendering */
+                -webkit-font-smoothing: antialiased;
+            }
+
+            /* 5. Improve media defaults */
+            img,
+            picture,
+            video,
+            canvas,
+            svg {
+                display: block;
+                max-width: 100%;
+            }
+
+            /* 6. Inherit fonts for form controls */
+            input,
+            button,
+            textarea,
+            select {
+                font: inherit;
+            }
+
+            /* 8. Improve line wrapping */
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                text-wrap: pretty;
+            }
+
+            /*
+  9. Create a root stacking context
+  */
+            #root,
+            #__next {
+                isolation: isolate;
+            }
+        </style>
+    </head>
+    <body class="overflow-x-hidden">
+          <!-- Navigation -->
+          <section class="sticky top-0 bg-white z-40">
+          <nav class="flex justify-between items-center py-4 px-[4vw] border-b-2 border-gray-300 lg:border-0">
+          <div class="font-semibold text-xl lg:text-3xl">
+          <a class="cursor-pointer" href="/">Max Stoic</a>
+          </div>
+          
+          <div class="hidden flex items-center gap-4 text-xl lg:flex">
+          <a class="cursor-pointer" href="/">Home</a>
+          <a class="cursor-pointer" href="#services">Services</a>
+          <a class="cursor-pointer" href="#testimonials">Testimonials</a>
+          <a class="cursor-pointer" href="#contact">Contact</a>
+          </div>
+          
+          <a class="hidden py-2 px-4 rounded-full bg-[#142F32] text-white font-semibold lg:block" href="">Schedule Call</a>
+          
+          <svg id="menu-btn" class="size-8 lg:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          </nav>
+          </section>
+          
+          <!-- Sidenavigation -->
+          <section id="sidenav" class="fixed top-0 left-[-100vw] bg-[#142F32] text-white w-screen h-screen transition-all duration-700 z-50">
+          <div class="flex justify-between items-center py-4 px-[4vw] border-b-2 lg:border-0">
+          <div class="font-semibold text-xl">
+          <a class="cursor-pointer" href="/">Max Stoic</a>
+          </div>
+          <svg id="close-btn" class="size-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+          </div>
+          <div class="w-screen py-4 px-[4vw]">
+          <div class="flex flex-col gap-8 text-3xl">
+          <a class="mobile--link" href="/">Home</a>
+          <a class="mobile--link" href="#services">Services</a>
+          <a class="mobile--link"  href="#testimonials">Testimonials</a>
+          <a class="mobile--link"  href="#contact">Contact</a>
+          </div>
+          <a class="inline-block my-8 py-2 px-4 rounded-full bg-[#E3FFCC] text-[#142F32] font-semibold" href="">Schedule Call</a>
+          </div>
+          </section>
+          
+          <!-- Hero -->
+          <section class="grid gap-8 px-[4vw] py-6">
+          <h1 class="text-4xl font-black">Learn the Secret System to add $100k/yr to your Online Business </h1>
+          <p class="text-md text-gray-500">This is the Smartest & Fastesr way for anyone to scale as a Coach or an Agency in 2025 without having to send any Cold Outreach Guaranteed</p>
+          <div class="grid gap-2">
+          <a class="cursor-pointer block text-center p-4 rounded-full bg-[#142F32] text-white font-semibold" href="">Free Webinar</a>
+          <a class="cursor-pointer block text-center p-4 rounded-full text-[#142F32] font-semibold border-2 border-gray-300 flex justify-center items-center" href="">
+          Testimonials
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+          </svg>
+          </a>
+          </div>
+          <iframe
+          class="aspect-video w-full rounded-lg"
+          src="https://youtube.com/embed/oQrHvBsgCVQ"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          ></iframe>
+          </section>
+          
+          <!-- About -->
+          <section id="about" class="px-[4vw] py-6 bg-[#142F32] text-white">
+          <h2 class="my-4 text-xl uppercase text-gray-200">About Me</h2>
+          <div class="grid gap-6">
+          <h1 class="text-4xl capitalize text-center">I help people sign their first clients and change their lives.</h1>
+          <img
+          class="w-[80%] mx-auto rounded-lg"
+          src="max.jpg"
+          />
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
+          <div>
+          <p class="text-xl">2 Years of Struggle</p>
+          <p class="text-sm text-gray-400">I spent two years trying to make money online, failing repeatedly, wasting time, and losing both money and faith in the process. It felt like success was impossible—until everything changed.</p>
+          </div>
+          
+          <div>
+          <p class="text-xl">The Stoic IPA System</p>
+          <p class="text-sm text-gray-400">After developing my Stoic IPA System, everything turned around. Within just six months, I went from failure to earning $20,000 a month and eventually scaled to over $1 million a year.</p>
+          </div>
+          
+          <div>
+          <p class="text-xl">Proven Results</p>
+          <p class="text-sm text-gray-400">The Stoic IPA System isn’t a theory—it’s been tested, refined, and proven. It helped me build a business I love, and now it’s helping others do the same.</p>
+          </div>
+          
+          <div>
+          <p class="text-xl">Helping you Succeed</p>
+          <p class="text-sm text-gray-400">I’ve made it my mission to help others discover and implement this system. You’ll learn how to get started, sign your first clients, and transform your life like I did.</p>
+          </div>
+          
+          <div>
+          <p class="text-xl">Free Webinar Access</p>
+          <p class="text-sm text-gray-400">In this free webinar, I’ll walk you through everything you need to know—step-by-step. This is your opportunity to gain the tools and strategies that took me years to figure out.</p>
+          </div>
+          
+          <div>
+          <p class="text-xl">$100k Guarantee</p>
+          <p class="text-sm text-gray-400">This webinar isn’t just information—it’s a roadmap to results. Learn how to scale your business by $100,000 or more, guaranteed, and finally build the life you’ve been dreaming of.</p>
+          </div>
+          </div>
+          </section>
+          
+          <!-- Pain points -->
+          <section class="px-[4vw] py-6 lg:grid lg:grid-cols-2 items-center">
+          <div>
+          <h1 class="text-2xl">Your Coaching Journey Deserves More than Frustration and Setbacks</h1>
+          <ul class="p-4 grid gap-4">
+          <li class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+          You waste time and energy on strategies that don’t work
+          </li>
+          <li class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+          Your income is inconsistent, making it hard to predict or plan for growth
+          </li>
+          <li class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+          You work long hours but still don’t see meaningful results
+          </li>
+          <li class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+          Signing high-value clients feels impossible without a clear strategy
+          </li>
+          <li class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+          Setbacks crush your confidence, making $100K per month seem out of reach
+          </li>
+          </ul>
+          </div>
+          <img class="w-[90%] mx-auto" src="https://img.freepik.com/free-vector/angry-man-concept-illustration_114360-17659.jpg?ga=GA1.1.332625714.1718863669&semt=ais_hybrid" />
+          </section>
+          
+          <!-- Solutions -->
+          <section class="px-[4vw] py-6 lg:grid lg:grid-cols-2">
+          <div>
+          <h3 class="text-2xl">Overcoming Your Challenges, Together</h3>
+          <p class="p-4">
+          The Stoic IPA System gives you a clear plan to grow your business. It simplifies the process so you can take action confidently and see results without feeling overwhelmed.
+          <br><br>
+          You’ll create consistent income using proven strategies that work. No more wasted time or money—just a steady flow of high-value clients to help you scale sustainably.
+          <br><br>
+          This system helps you work smarter, not harder. With actionable frameworks, you’ll avoid burnout and have the tools to sign clients and hit $100K per month.
+          
+          </p>
+          </div>
+          <img class="lg:order-first w-[90%] mx-auto" src="https://img.freepik.com/free-vector/flat-design-feedback-concept_23-2148957875.jpg?ga=GA1.1.332625714.1718863669" />
+          </section>
+          
+          <!-- Why Work with Us -->
+          <section id="services" class="px-[4vw] py-6 bg-[#142F32] text-white">
+          <h1 class="text-2xl capitalize">Why Work with Us</h1>
+          <div class="grid lg:grid-cols-3 gap-12 my-6 px-4">
+          <div class="flex flex-col items-center gap-2">
+          <img
+          class="w-[80%] rounded-lg"
+          src="https://img.freepik.com/free-vector/self-confidence-concept-illustration_114360-6815.jpg?t=st=1731120532~exp=1731124132~hmac=35ebc1440929baf8aa432c56d63df659ee386e867536c27b849133ac79152a93&w=740"
+          />
+          <h2 class="text-xl font-bold">Confidence Boost</h2>
+          <p class="text-sm text-center">Gain confidence through personalized coaching, empowering you to overcome challenges with assurance.</p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+          <img
+          class="w-[80%] rounded-lg"
+          src="https://img.freepik.com/free-vector/personal-site-concept-illustration_114360-3417.jpg?t=st=1731120607~exp=1731124207~hmac=3361293d1242a9c95f6323c65c5b4278ecc6e089ce0fcbd5221e598dd026dc16&w=740"
+          />
+          <h2 class="text-xl font-bold">Personalized Coaching</h2>
+          <p class="text-sm text-center">1-on-1 Coaching, ensuring more effective and faster results.</p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+          <img
+          class="w-[80%] rounded-lg"
+          src="https://img.freepik.com/free-vector/goal-concept-illustration_114360-1412.jpg?t=st=1733642847~exp=1733646447~hmac=9291950430bf4043c490fbbbeaf582a6de1c6939769388e053694bd2666b8baa&w=740"
+          />
+          <h2 class="text-xl font-bold">Quick Growth</h2>
+          <p class="text-sm text-center">Focus on safe, effective techniques and methods that help you scale easily and effectively.</p>
+          </div>
+          </div>
+          </section>
+          
+          <!-- How it Works -->
+          <section class="px-[4vw] py-6">
+          <h1 class="text-4xl">How It Works</h1>
+          <div class="p-4 grid gap-4">
+          <div class="grid gap-2">
+          <h2 class="text-xl lg:text-3xl">1. Register for the Free Webinar</h2>
+          <p class="text-gray-700 lg:text-xl">Sign up for an in-depth session where you’ll learn about the Stoic IPA System, how it works, and how it can transform your business.</p>
+          </div>
+          <div class="grid gap-2">
+          <h2 class="text-xl lg:text-3xl">2. Learn the Proven System</h2>
+          <p class="text-gray-700 lg:text-xl">Discover the step-by-step process to attract clients, create consistent income, and scale your business to $100K per month and beyond.</p>
+          </div>
+          <div class="grid gap-2">
+          <h2 class="text-xl lg:text-3xl">3. Start seeing Results</h2>
+          <p class="text-gray-700 lg:text-xl">Apply the strategies from the webinar, sign your first clients, and watch your income and confidence grow with every step.</p>
+          </div>
+          </div>
+          </section>
+          
+          
+          <!-- Testimonials -->
+          <section id="testimonials" class="px-[4vw] py-6 w-[100vw] bg-[#142F32] overflow-hidden">
+          <h1 class="text-4xl text-white">What Our Clients Say</h1>
+          <div class="w-[100%] overflow-auto my-8 snap-x flex lg:justify-center lg:flex-wrap lg:gap-4">
+          <div class="p-4 w-[80vw]  lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-2">
+          <h1 class="text-2xl">"From Struggling to Thriving"</h1>
+          <p class="text-sm">The Stoic IPA System completely changed my business. I went from inconsistent income to signing clients every week. I’m finally living the life I’ve dreamed of!</p>
+          <div class="flex gap-2">
+          <img class="size-12 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" />
+          <div class="flex flex-col justify-center items-start">
+          <p>Jessica Adams</p>
+          <img src="stars.svg">
+          </div>
+          </div>
+          </div>
+          <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-">
+          <h1 class="text-2xl">"Confidence and Clarity"</h1>
+          <p class="text-sm">I struggled to figure out how to grow my business until I found this system. Now, I have a clear plan and the confidence to scale beyond my goals.</p>
+          <div class="flex gap-2">
+          <img class="size-12 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" />
+          <div class="flex flex-col justify-center items-start">
+          <p>James Carter</p>
+          <img src="stars.svg">
+          </div>
+          </div>
+          </div>
+          <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-2">
+          <h1 class="text-2xl">"Consistent High-Paying Clients"</h1>
+          <p class="text-sm">This system taught me how to attract and close high-value clients. I’m now consistently hitting $20K months and scaling even further!</p>
+          <div class="flex gap-2">
+          <img class="size-12 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" />
+          <div class="flex flex-col justify-center items-start">
+          <p>Amanda Wells</p>
+          <img src="stars.svg">
+          </div>
+          </div>
+          </div>
+          <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-2">
+          <h1 class="text-2xl">"Life-Changing Results"</h1>
+          <p class="text-sm">Before this program, I was stuck in the same income bracket for years. Now, I’ve scaled to six figures and completely transformed my life and business.</p>
+          <div class="flex gap-2">
+          <img class="size-12 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" />
+          <div class="flex flex-col justify-center items-start">
+          <p>Michael Johnson</p>
+          <img src="stars.svg">
+          </div>
+          </div>
+          </div>
+          <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 mr-6 bg-[#D8EFED] grid gap-2">
+          <h1 class="text-2xl">"Support That Works"</h1>
+          <p class="text-sm">The guidance I received through the Stoic IPA System was incredible. Every step was clear and actionable. I’ve never been more confident in my business growth!</p>
+          <div class="flex gap-2">
+          <img class="size-12 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" />
+          <div class="flex flex-col justify-center items-start">
+          <p>Linda Roberts</p>
+          <img src="stars.svg">
+          </div>
+          </div>
+          </div>
+          </div>
+          </section>
+          
+          <section class="w-[100vw] aspect-[9/16]">
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/thakuripratik257/test-booking" style="width:100%;height:100%;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
+          </section>
+          
+          
+          <footer class="bg-[#142F32] text-white px-[4vw] py-6 grid lg:grid-cols-2">
+          <div class="flex flex-col">
+          <h1 class="text-2xl">Navigation</h1>
+          <div class="flex flex-col gap-4 p-4">
+          <a class="cursor-pointer" href="/" >Home</a>
+          <a class="cursor-pointer" href="#services" >Services</a>
+          <a class="cursor-pointer" href="#testimonials" >Testimonials</a>
+          <a class="cursor-pointer" href="#contact" >Contact</a>
+          </div>
+          </div>
+          <div id="contact" class="flex flex-col">
+          <h1 class="text-2xl">Socials</h1>
+          <div class="flex flex-col gap-4 p-4">
+          <a class="cursor-pointer" href="https://youtube.com/@themaxstoic?si=9Wt4WhWizWRyA7mp" >Youtube</a>
+          <a class="cursor-pointer" href="" >Telegram</a>
+          <a class="cursor-pointer" href="https://www.instagram.com/themaxstoic" >Instagram</a>
+          </div>
+          </div>
+          </footer>
+        
+        <script type="text/javascript">
+            var menuBtn = document.getElementById("menu-btn");
+            var closeBtn = document.getElementById("close-btn");
+            var sidenav = document.getElementById("sidenav");
+            menuBtn.addEventListener("click", function () {
+                sidenav.style.left = 0;
+            });
+            closeBtn.addEventListener("click", function () {
+                sidenav.style.left = "-100vw";
+            });
+            
+            var mobile_links = document.getElementsByClassName("mobile--link")
+           Array.from(mobile_links).forEach(function(element){
+           element.addEventListener("click",function(){
+           sidenav.style.left = "-100vw";
+           })
+           })
+        </script>
+    </body>
+</html>
