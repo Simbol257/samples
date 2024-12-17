@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>sculptbyspurgeon</title>		
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+        </style>
+
+        <!-- CSS Reset -->
+        <style type="text/css">
+            /* 1. Use a more-intuitive box-sizing model */
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                font-family: "Space Grotesk";
+                scroll-behavior: smooth;
+            }
+
+            /* 2. Remove default margin */
+            * {
+                margin: 0;
+            }
+
+            body {
+                /* 4. Improve text rendering */
+                -webkit-font-smoothing: antialiased;
+            }
+
+            /* 5. Improve media defaults */
+            img,
+            picture,
+            video,
+            canvas,
+            svg {
+                display: block;
+                max-width: 100%;
+            }
+
+            /* 6. Inherit fonts for form controls */
+            input,
+            button,
+            textarea,
+            select {
+                font: inherit;
+            }
+
+            /* 8. Improve line wrapping */
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                text-wrap: pretty;
+            }
+
+            /*
+  9. Create a root stacking context
+  */
+            #root,
+            #__next {
+                isolation: isolate;
+            }
+        </style>
+    </head>
+    <body class="overflow-x-hidden">
+        <!-- Navigation -->
+        <section class="sticky top-0 bg-white z-40">
+        <nav class="flex justify-between items-center py-4 px-[4vw] border-b-2 border-gray-300 lg:border-0">
+        <div class="font-semibold text-xl lg:text-3xl">
+        <a class="cursor-pointer" href="/">sculptbyspurgeon</a>
+        </div>
+        
+        <div class="hidden flex items-center gap-4 text-xl lg:flex">
+        <a class="cursor-pointer" href="/">Home</a>
+        <a class="cursor-pointer" href="#services">Services</a>
+        <a class="cursor-pointer" href="#testimonials">Testimonials</a>
+        <a class="cursor-pointer" href="#contact">Contact</a>
+        </div>
+        
+        <a class="hidden py-2 px-4 rounded-full bg-[#142F32] text-white font-semibold lg:block" href="">Schedule Call</a>
+        
+        <svg id="menu-btn" class="size-8 lg:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        </nav>
+        </section>
+        <!-- Sidenavigation -->
+        <section id="sidenav" class="fixed top-0 left-[-100vw] bg-[#142F32] text-white w-screen h-screen transition-all duration-700 z-50">
+        <div class="flex justify-between items-center py-4 px-[4vw] border-b-2 lg:border-0">
+        <div class="font-semibold text-xl">
+        <a class="cursor-pointer" href="/">sculptbyspurgeon</a>
+        </div>
+        <svg id="close-btn" class="size-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+        </div>
+        <div class="w-screen py-4 px-[4vw]">
+        <div class="flex flex-col gap-8 text-3xl">
+        <a class="mobile--link" href="/">Home</a>
+        <a class="mobile--link" href="#services">Services</a>
+        <a class="mobile--link"  href="#testimonials">Testimonials</a>
+        <a class="mobile--link"  href="#contact">Contact</a>
+        </div>
+        <a class="inline-block my-8 py-2 px-4 rounded-full bg-[#E3FFCC] text-[#142F32] font-semibold" href="">Schedule Call</a>
+        </div>
+        </section>
+        <!-- Hero -->
+        <section class="grid gap-8 px-[4vw] py-6">
+        <h1 class="text-4xl font-black">Transform Your Body & Life with Josh.</h1>
+        <p class="text-md text-gray-500">Josh has helped hundreds of people, just like you, transform their bodies and lives. With over a decade of coaching experience and a personal 100lb weight loss journey, Josh provides personalized fitness coaching and flexible nutrition plans that deliver lasting results. Ready to get started?</p>
+        <div class="grid gap-2">
+        <a class="cursor-pointer block text-center p-4 rounded-full bg-[#142F32] text-white font-semibold" href="">Book a Meeting</a>
+        <a class="cursor-pointer block text-center p-4 rounded-full text-[#142F32] font-semibold border-2 border-gray-300 flex justify-center items-center" href="">
+        Testimonials
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+        </a>
+        </div>
+        <iframe
+        class="aspect-video w-full rounded-lg"
+        src="https://youtube.com/embed/UStrSfnPimo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        ></iframe>
+        </section>
+        
+        
+        <!-- About -->
+        <section id="about" class="px-[4vw] py-6 bg-[#142F32] text-white">
+        <h2 class="my-4 text-xl uppercase text-gray-200">About Me</h2>
+        <div class="grid gap-6">
+        <h1 class="text-4xl capitalize text-center">I help you build sustainable fitness habits and transform your body for life.</h1>
+        <img
+        class="w-[80%] mx-auto rounded-lg"
+        src="josh.jpg"
+        />
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
+        <div>
+        <p class="text-xl">A Decade of Coaching</p>
+        <p class="text-sm text-gray-500">Started in 2012, Josh has been guiding clients through transformative fitness journeys for over ten years.</p>
+        </div>
+        
+        <div>
+        <p class="text-xl">Personal Experience</p>
+        <p class="text-sm text-gray-500">Josh’s personal journey of losing 100lbs empowers him to understand the struggles and triumphs of his clients.</p>
+        </div>
+        
+        <div>
+        <p class="text-xl">Flexible Nutrition</p>
+        <p class="text-sm text-gray-500">Passionate about flexible dieting, Josh tailors meal plans that fit your lifestyle without sacrificing enjoyment or results.</p>
+        </div>
+        
+        <div>
+        <p class="text-xl">Strength and Conditioning</p>
+        <p class="text-sm text-gray-500">With a focus on weightlifting, bodybuilding, and martial arts, Josh helps clients build strength, muscle, and confidence.</p>
+        </div>
+        
+        <div>
+        <p class="text-xl">Sustainable Results</p>
+        <p class="text-sm text-gray-500">Josh emphasizes long-term habits over quick fixes, ensuring clients achieve lasting body transformation.</p>
+        </div>
+        
+        <div>
+        <p class="text-xl">Supportive Community</p>
+        <p class="text-sm text-gray-500">Join a community of like-minded individuals committed to pushing each other towards their fitness goals.</p>
+        </div>
+        </div>
+        </section>
+        
+        
+        <!-- Pain points -->
+        <section class="px-[4vw] py-6 lg:grid lg:grid-cols-2 items-center">
+        <div>
+        <h1 class="text-2xl">Your Fitness Journey Deserves More than Frustration and Setbacks</h1>
+        <ul class="p-4 grid gap-4">
+        <li class="flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+        You feel overwhelmed by conflicting diet advice and fitness trends
+        </li>
+        <li class="flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+        Your progress feels slower than expected despite putting in effort
+        </li>
+        <li class="flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+        You want to feel stronger, but your confidence in training is low
+        </li>
+        <li class="flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+        You’re struggling with staying consistent and motivated
+        </li>
+        <li class="flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-red-400 flex-none">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+        Injuries and recovery are constantly holding you back
+        </li>
+        </ul>
+        </div>
+        <img class="w-[90%] mx-auto" src="https://img.freepik.com/free-vector/angry-man-concept-illustration_114360-17659.jpg?ga=GA1.1.332625714.1718863669&semt=ais_hybrid" />
+        </section>
+        
+        <!-- Solutions -->
+        <section class="px-[4vw] py-6 lg:grid lg:grid-cols-2">
+        <div>
+        <h3 class="text-2xl">Overcoming Your Fitness Challenges, Together</h3>
+        <p class="p-4">
+        Starting your fitness journey can feel overwhelming, especially when trying to balance diet, strength, and mindset. As someone who’s been through these challenges firsthand, I’ve crafted a training approach that helps clients overcome obstacles step-by-step.<br />
+        <br />
+        The program focuses on achievable goals and progress. Rather than feeling lost, you’ll focus on small victories that build into lasting results. With each session, you’ll gain confidence, seeing consistent improvement.<br />
+        <br />
+        My approach also emphasizes mental toughness, helping you cultivate resilience and focus that translate into better performance in training—and in life. In a supportive environment, you’ll not only grow physically but also mentally.
+        </p>
+        </div>
+        <img class="lg:order-first w-[90%] mx-auto" src="https://img.freepik.com/free-vector/flat-design-feedback-concept_23-2148957875.jpg?ga=GA1.1.332625714.1718863669" />
+        </section>
+        
+        <!-- Why Work with Us -->
+        <section id="services" class="px-[4vw] py-6 bg-[#142F32] text-white">
+        <h1 class="text-2xl capitalize">Why Work with Us</h1>
+        <div class="grid lg:grid-cols-3 gap-12 my-6 px-4">
+        <div class="flex flex-col items-center gap-2">
+        <img
+        class="w-[80%] rounded-lg"
+        src="https://img.freepik.com/free-vector/self-confidence-concept-illustration_114360-6815.jpg?t=st=1731120532~exp=1731124132~hmac=35ebc1440929baf8aa432c56d63df659ee386e867536c27b849133ac79152a93&w=740"
+        />
+        <h2 class="text-xl font-bold">Confidence Boost</h2>
+        <p class="text-sm text-center">Gain confidence through personalized coaching, empowering you to overcome training challenges and spar with assurance.</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+        <img
+        class="w-[80%] rounded-lg"
+        src="https://img.freepik.com/free-vector/personal-site-concept-illustration_114360-3417.jpg?t=st=1731120607~exp=1731124207~hmac=3361293d1242a9c95f6323c65c5b4278ecc6e089ce0fcbd5221e598dd026dc16&w=740"
+        />
+        <h2 class="text-xl font-bold">Personalized Training</h2>
+        <p class="text-sm text-center">Tailored programs that adapt to your goals, experience, and schedule, ensuring more effective and faster results.</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+        <img
+        class="w-[80%] rounded-lg"
+        src="https://img.freepik.com/free-vector/man-crutches-disabled-guy-invalid-with-legs-disability-outdoor-stroll-trauma-rehabilitation-handicap-using-walkers_575670-2085.jpg?t=st=1731120677~exp=1731124277~hmac=b82c22627c2111512f4ad517f259153dbf65053497ab5f980316a3227c336727&w=740"
+        />
+        <h2 class="text-xl font-bold">Injury Prevention</h2>
+        <p class="text-sm text-center">Focus on safe, effective techniques and recovery methods that help you train consistently without setbacks.</p>
+        </div>
+        </div>
+        </section>
+        
+        <!-- How it Works -->
+        <section class="px-[4vw] py-6">
+        <h1 class="text-4xl">How It Works</h1>
+        <div class="p-4 grid gap-4">
+        <div class="grid gap-2">
+        <h2 class="text-xl lg:text-3xl">1. Book a Free Call</h2>
+        <p class="text-gray-700 lg:text-xl">Schedule a one-on-one call to discuss your goals, experience, and any concerns. Together, we’ll create a tailored plan to get you started.</p>
+        </div>
+        <div class="grid gap-2">
+        <h2 class="text-xl lg:text-3xl">2. Start Your Customized Training Program</h2>
+        <p class="text-gray-700 lg:text-xl">Dive into a training program that is designed around your specific needs and goals. Each session will bring you closer to your fitness aspirations.</p>
+        </div>
+        <div class="grid gap-2">
+        <h2 class="text-xl lg:text-3xl">3. Track Progress and Adjust</h2>
+        <p class="text-gray-700 lg:text-xl">We’ll regularly review your progress and adjust the plan to ensure you continue making strides toward your goals.</p>
+        </div>
+        </div>
+        </section>
+        
+        
+        <!-- Testimonials -->
+        <section id="testimonials" class="px-[4vw] py-6 w-[100vw] bg-[#142F32] overflow-hidden">
+        <h1 class="text-4xl text-white">What Our Clients Say</h1>
+        <div class="w-[100%] overflow-auto my-8 snap-x flex lg:justify-center lg:flex-wrap lg:gap-4">
+        <div class="p-4 w-[80vw]  lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-2">
+        <h1 class="text-2xl">"A Total Transformation"</h1>
+        <p class="text-sm">With the guidance of my coach, I’ve not only lost weight but gained confidence and a healthier mindset. I’m stronger and more energized than ever before!</p>
+        <div class="flex gap-2">
+        <img class="size-12 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" />
+        <div class="flex flex-col justify-center items-start">
+        <p>Jessica Adams</p>
+        <img src="stars.svg">
+        </div>
+        </div>
+        </div>
+        <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-">
+        <h1 class="text-2xl">"A Healthier Me"</h1>
+        <p class="text-sm">I’ve struggled with my weight for years, but this program helped me break through those barriers. The support and accountability made all the difference!</p>
+        <div class="flex gap-2">
+        <img class="size-12 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" />
+        <div class="flex flex-col justify-center items-start">
+        <p>James Carter</p>
+        <img src="stars.svg">
+        </div>
+        </div>
+        </div>
+        <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-2">
+        <h1 class="text-2xl">"Sustainable Results"</h1>
+        <p class="text-sm">This weight loss program is unlike anything else. I not only lost the weight but also developed lifelong healthy habits. My coach helped me stay on track and motivated!</p>
+        <div class="flex gap-2">
+        <img class="size-12 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" />
+        <div class="flex flex-col justify-center items-start">
+        <p>Amanda Wells</p>
+        <img src="stars.svg">
+        </div>
+        </div>
+        </div>
+        <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 bg-[#D8EFED] grid gap-2">
+        <h1 class="text-2xl">"Changed My Life"</h1>
+        <p class="text-sm">I never thought I could lose weight and keep it off, but thanks to this program, I’ve lost 30 pounds and feel incredible. I have more energy and love my new lifestyle!</p>
+        <div class="flex gap-2">
+        <img class="size-12 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" />
+        <div class="flex flex-col justify-center items-start">
+        <p>Michael Johnson</p>
+        <img src="stars.svg">
+        </div>
+        </div>
+        </div>
+        <div class="p-4 w-[80vw] lg:w-[25vw] snap-center shrink-0 rounded-lg mx-2 mr-6 bg-[#D8EFED] grid gap-2">
+        <h1 class="text-2xl">"Support Every Step of the Way"</h1>
+        <p class="text-sm">The coaching I received was so personalized and supportive. Every step of the journey was guided, and I felt truly cared for. I’ve never been more motivated!</p>
+        <div class="flex gap-2">
+        <img class="size-12 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" />
+        <div class="flex flex-col justify-center items-start">
+        <p>Linda Roberts</p>
+        <img src="stars.svg">
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+        
+        
+        <section class="w-[100vw] aspect-[9/16]">
+         <!-- Calendly inline widget begin -->
+         <div class="calendly-inline-widget" data-url="https://calendly.com/thakuripratik257/test-booking" style="width:100%;height:100%;"></div>
+         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+         <!-- Calendly inline widget end -->
+        </section>
+        
+        
+        <footer class="bg-[#142F32] text-white px-[4vw] py-6 grid lg:grid-cols-2">
+        <div class="flex flex-col">
+        <h1 class="text-2xl">Navigation</h1>
+        <div class="flex flex-col gap-4 p-4">
+        <a class="cursor-pointer" href="/" >Home</a>
+        <a class="cursor-pointer" href="#services" >Services</a>
+        <a class="cursor-pointer" href="#testimonials" >Testimonials</a>
+        <a class="cursor-pointer" href="#contact" >Contact</a>
+        </div>
+        </div>
+        <div id="contact" class="flex flex-col">
+        <h1 class="text-2xl">Socials</h1>
+        <div class="flex flex-col gap-4 p-4">
+        <a class="cursor-pointer" href="https://youtube.com/" >Youtube</a>
+        <a class="cursor-pointer" href="https://t.me/" >Telegram</a>
+        <a class="cursor-pointer" href="https://www.instagram.com/sculptbyspurgeon" >Instagram</a>
+        </div>
+        </div>
+        </footer>
+        
+        <script type="text/javascript">
+            var menuBtn = document.getElementById("menu-btn");
+            var closeBtn = document.getElementById("close-btn");
+            var sidenav = document.getElementById("sidenav");
+            menuBtn.addEventListener("click", function () {
+                sidenav.style.left = 0;
+            });
+            closeBtn.addEventListener("click", function () {
+                sidenav.style.left = "-100vw";
+            });
+            
+            var mobile_links = document.getElementsByClassName("mobile--link")
+           Array.from(mobile_links).forEach(function(element){
+           element.addEventListener("click",function(){
+           sidenav.style.left = "-100vw";
+           })
+           })
+        </script>
+    </body>
+</html>
