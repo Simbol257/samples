@@ -457,12 +457,7 @@ font-size:1rem;
 </div>
 </div>
 <div class="video-wrapper">
-<span id="play-btn"  class="material-symbols-rounded">
-play_arrow
-</span>
-<video id="player" class="plyr" poster="https://i.postimg.cc/gjQrShZN/thumbnail.jpg" controls>
-<source src="video.mp4" type="video/mp4" />
-</video>
+<div class="plyr"  id="player" data-plyr-provider="youtube" data-plyr-embed-id="YrASYiYEJCo"></div>
 </div>
 <div class="hero-cta-rank">
 <a class="cta" href="" >
@@ -700,8 +695,7 @@ group
 <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
 <script>
     const player = new Plyr('.plyr', {
-    controls: ['play-large'],
-    fullscreen:{enabled:false}
+    
    });
    
    const controls = document.querySelector(".plyr__controls")
